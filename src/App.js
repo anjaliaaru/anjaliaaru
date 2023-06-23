@@ -1,10 +1,28 @@
 import React, { Component } from "react";
-import logo from'logo. svg';
-import './App.css';
+
+import {
+  BrowserRouter as Router,
+ Routes,
+  Route,
+} from "react-router-dom";
+import Navbar from './components/Navbar';
+import Home from './Home';
 
 export class App extends Component {
-  render() {
-    return <div>Hello My first class based components</div>;
+render() {
+    return (
+      <><Router>
+        <div>
+      <Navbar/>
+      <Home/>
+      <Routes>
+        <Route path="/about"></Route>    
+        <Route path="/users"></Route>
+      </Routes>
+      </div>
+      </Router>
+    </>
+    )
   }
 }
 
