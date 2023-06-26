@@ -7,20 +7,24 @@ import {
 } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './Home';
+import NewsState from './contaxt/notes/NoteState';
 
 export class App extends Component {
 render() {
     return (
-      <><Router>
-        <div>
+      <>
+      <NoteState>
+      <Router>
+       
       <Navbar/>
       <Home/>
       <Routes>
         <Route path="/about"></Route>    
         <Route path="/users"></Route>
       </Routes>
-      </div>
+     
       </Router>
+      </NoteState>
     </>
     )
   }
