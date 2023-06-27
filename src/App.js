@@ -1,26 +1,23 @@
-import React, { Component } from "react";
+import React  from "react";
+import NoteState from'./components/context/notes/NoteState';
+import Navbar from'./components/Navbar';
+import Home from './Home';
 
 import {
   BrowserRouter as Router,
  Routes,
-  Route,
-} from "react-router-dom";
-import Navbar from './components/Navbar';
-import Home from './Home';
-import NewsState from './contaxt/notes/NoteState';
-
-export class App extends Component {
-render() {
+  Route } from "react-router-dom";
+function App(){
+  
     return (
       <>
       <NoteState>
       <Router>
-       
-      <Navbar/>
-      <Home/>
-      <Routes>
-        <Route path="/about"></Route>    
-        <Route path="/users"></Route>
+        <Navbar/>
+        <Home/>
+        <Routes>
+        <Route path="/"></Route>    
+        <Route path="/About"></Route>
       </Routes>
      
       </Router>
@@ -28,7 +25,7 @@ render() {
     </>
     )
   }
-}
+
 
 export default App;
 
