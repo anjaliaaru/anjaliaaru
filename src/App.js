@@ -1,31 +1,32 @@
-import React  from "react";
-import NoteState from'./components/context/notes/NoteState';
-import Navbar from'./components/Navbar';
+
+
+import './App.css';
+
+import NavBar from './components/Navbar';
+import About from './components/About';
+
+import { BrowserRouter as
+   Router, Route, Routes, } from 'react-router-dom';
 import Home from './Home';
+import NoteState from './components/context/notes/NoteState';
 
-import {
-  BrowserRouter as Router,
- Routes,
-  Route } from "react-router-dom";
-function App(){
+function App() {
+  return (
+    <>
+    <NoteState>
+        <Router>
+          <NavBar />
   
-    return (
-      <>
-      <NoteState>
-      <Router>
-        <Navbar/>
-        <Home/>
-        <Routes>
-        <Route path="/"></Route>    
-        <Route path="/About"></Route>
-      </Routes>
-     
-      </Router>
-      </NoteState>
+          <div className="container"> 
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/about" element={<About />} />
+            </Routes>
+          </div>
+        </Router>
+        </NoteState>
     </>
-    )
-  }
-
+  )
+}
 
 export default App;
-
