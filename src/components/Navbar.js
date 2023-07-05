@@ -7,6 +7,7 @@ let location = useLocation();
   // useEffect(() => {
   //   console.log(location);
   // }, [location]);
+  
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">

@@ -7,16 +7,17 @@ import About from './components/About';
 
 import { BrowserRouter as
    Router, Route, Routes, } from 'react-router-dom';
-import Home from './Home';
+import Home from './components/context/notes/Home';
 import NoteState from './components/context/notes/NoteState';
 
 function App() {
   return (
     <>
     <NoteState>
+      
         <Router>
           <NavBar />
-  
+          
           <div className="container"> 
             <Routes>
               <Route exact path="/" element={<Home />} />
